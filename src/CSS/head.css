@@ -1,0 +1,18 @@
+.header-area .main-nav .nav li:hover a, .header-area .main-nav .nav li a.active {
+    color: #e7e7e7 !important;
+    font-weight: bold;
+  }
+
+
+  .header-area .main-nav .nav li a {
+    color: #4b8ef1;
+  }
+  a {
+    color: #4b8ef1;
+    text-decoration: None;
+    font-weight: bold
+  }
+  .bi-slash{
+    color: #fff ;
+  }
+  

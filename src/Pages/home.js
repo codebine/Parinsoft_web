@@ -1,33 +1,26 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../CSS/style.css";
 import "../CSS/owl.css";
 import "../CSS/animated.css";
+import "../CSS/main.css";
 import Logo from "../img/logo.png"
 import slider from "../img/slider-dec.png"
 import heading from "../img/heading-line-dec.png"
 import about from "../img/about-right-dec.png"
 import qoute from "../img/quote.png"
 import client from "../img/client-image.jpg"
+import thumb1 from "../img/thumb1.png";
+import thumb2 from "../img/thumb2.png";
+import shape1 from "../img/shape1.svg";
+import shape2 from "../img/shape2.svg";
 
 
 const home = () => {
   return (
     <div>
-      {/* <!-- ***** Preloader Start ***** --> */}
-      {/* <div id="js-preloader" className="js-preloader">
-        <div className="preloader-inner">
-          <span className="dot"></span>
-          <div className="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div> */}
-      {/* <!-- ***** Preloader End ***** --> */}
-
       {/* <!-- ***** Header Area Start ***** --> */}
       <header
         className="header-area header-sticky wow slideInDown"
@@ -40,27 +33,31 @@ const home = () => {
               <nav className="main-nav">
                 {/* <!-- ***** Logo Start ***** --> */}
                 <a href="index.html" className="logo">
-                  <img src={Logo} alt="Chain App Dev"/>
+                  <img src={Logo} alt="Chain App Dev" />
                 </a>
                 {/* <!-- ***** Logo End ***** --> */}
                 {/* <!-- ***** Menu Start ***** --> */}
                 <ul className="nav">
                   <li className="scroll-to-section">
-                    <a href="#top" className="active">
-                      Home
-                    </a>
+                    <NavLink to="/Home" className="active">Home</NavLink>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#services">Services</a>
+                    <NavLink to="/About">About</NavLink>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#about">About</a>
+                    <NavLink to="/Services">Services</NavLink>
+                  </li>
+                  {/* <li className="scroll-to-section">
+                    <a href="#pricing">Technologies</a>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#pricing">Pricing</a>
+                    <a href="#newsletter">Consulting</a>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#newsletter">Newsletter</a>
+                    <a href="#newsletter">Products</a>
+                  </li> */}
+                  <li className="scroll-to-section">
+                    <NavLink to="/Contact">Contact</NavLink>
                   </li>
                   <li>
                     <div className="gradient-button">
@@ -247,7 +244,7 @@ const home = () => {
                     data-wow-duration="1s"
                     data-wow-delay="0.5s"
                   >
-                    <img src={slider} alt=""/>
+                    <img src={slider} alt="" />
                   </div>
                 </div>
               </div>
@@ -268,7 +265,7 @@ const home = () => {
                 <h4>
                   Amazing <em>Services &amp; Features</em> for you
                 </h4>
-                <img src={heading} alt=""/>
+                <img src={heading} alt="" />
                 <p>
                   If you need the greatest collection of HTML templates for your
                   business, please visit{" "}
@@ -371,7 +368,7 @@ const home = () => {
                 <h4>
                   About <em>What We Do</em> &amp; Who We Are
                 </h4>
-                <img src={heading} alt=""/>
+                <img src={heading} alt="" />
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eismod tempor incididunt ut labore et dolore magna.
@@ -425,12 +422,216 @@ const home = () => {
             </div>
             <div className="col-lg-6">
               <div className="right-image">
-              <img src={about} alt=""/>
+                <img src={about} alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Intro  */}
+      <div class="section large-padding-tb overflow-hidden">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="optech-thumb extra-mr">
+                <img
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                  alt="Main IT Solutions Thumbnail"
+                  class="h-auto w-100 aos-init aos-animate"
+                  sizes="100vw"
+                  decoding="async" src={thumb1} />
+                <div class="optech-thumb-position aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
+                  <img
+                    alt="Additional IT Solutions Thumbnail" class="h-auto w-100" decoding="async" src={thumb2} />
+                </div>
+                <div class="optech-shape1">
+                  <img
+                    alt="Decorative Shape 1"
+                    width="133"
+                    height="200"
+                    decoding="async"
+                    src={shape1} />
+                </div>
+                <div class="optech-shape2">
+                  <img
+                    alt="Decorative Shape 2"
+                    width="104"
+                    height="107"
+                    decoding="async"
+                    src={shape2} />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-end">
+              <div class="optech-default-content ml40">
+                <h2>More than 25+ years we provide IT solutions</h2>
+                <h5>During this time, we’ve built a reputation for excellent client satisfaction as evidenced by our achievements.</h5>
+                <p>Each demo built with Teba will look unique. You can customize almost any aspect of your website's appearance with just a few clicks. Each demo built with Teba will offer a different design.</p>
+                <div class="optech-extra-mt">
+                  <a class="optech-default-btn" data-text="More About Us" href="/about-us">
+                    <span class="btn-wraper">More About Us</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Intro  */}
+
+      {/*Services*/}
+      <div className="bg-light1">
+        <div class="sectin  optech-section-padding">
+          <div class="container">
+            <div class="optech-section-title center">
+              <h2>Our awesome services to give you success</h2>
+            </div>
+          </div>
+          <div class="swiper-wrapper justify-content-center">
+            <div class="swiper-slide swiper-slide-active" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="0">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <i class="fa fa-grav" aria-hidden="true"></i>
+
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>Data Tracking <br /> Security</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="1">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <img alt="icon" width="36" height="36" decoding="async"
+                    src="/assets/images/iconbox/icon5.svg" style={{ color: "transparent" }} />
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>IT Management <br /> Service</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="2">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <img alt="icon" width="36" height="36" decoding="async"
+                    src="/assets/images/iconbox/icon6.svg" style={{ color: "transparent" }} />
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>UI/UX &amp; Br/anding <br /> Identity</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="3">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <img alt="icon" width="36" height="36" decoding="async"
+                    src="/assets/images/iconbox/icon7.svg" style={{ color: "transparent" }} />
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>Web &amp; Mobile App <br /> Development</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper justify-content-center mt-5">
+            <div class="swiper-slide swiper-slide-active" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="0">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <i class="fa fa-grav" aria-hidden="true"></i>
+
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>Data Tracking <br /> Security</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="1">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <img alt="icon" width="36" height="36" decoding="async"
+                    src="/assets/images/iconbox/icon5.svg" style={{ color: "transparent" }} />
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>IT Management <br /> Service</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="2">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <img alt="icon" width="36" height="36" decoding="async"
+                    src="/assets/images/iconbox/icon6.svg" style={{ color: "transparent" }} />
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>UI/UX &amp; Br/anding <br /> Identity</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style={{ width: "292.167px", marginRight: "30px" }} data-swiper-slide-index="3">
+              <div class="optech-iconbox-wrap">
+                <div class="optech-iconbox-icon">
+                  <img alt="icon" width="36" height="36" decoding="async"
+                    src="/assets/images/iconbox/icon7.svg" style={{ color: "transparent" }} />
+                </div>
+                <div class="optech-iconbox-data">
+                  <h5>Web &amp; Mobile App <br /> Development</h5>
+                  <p>Developing a comprehensive IT strategy that aligns.</p>
+                  <a class="optech-icon-btn" href="/service-details">
+                    <i class="icon-show ri-arrow-right-line"></i>
+                    <span>Learn More</span>
+                    <i class="icon-hide ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*Services*/}
 
       <div id="clients" className="the-clients">
         <div className="container">
@@ -440,7 +641,7 @@ const home = () => {
                 <h4>
                   Check What <em>The Clients Say</em> About Our App Dev
                 </h4>
-                <img src={heading} alt=""/>
+                <img src={heading} alt="" />
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eismod tempor incididunt ut labore et dolore magna.
@@ -570,7 +771,7 @@ const home = () => {
                               <div className="row">
                                 <div className="col-lg-12">
                                   <div className="client-content">
-                                  <img src={qoute} alt=""/>
+                                    <img src={qoute} alt="" />
                                     <p>
                                       “Lorem ipsum dolor sit amet, consectetur
                                       adpiscing elit, sed do eismod tempor
@@ -581,7 +782,7 @@ const home = () => {
                                     </p>
                                   </div>
                                   <div className="down-content">
-                                  <img src={client} alt=""/>
+                                    <img src={client} alt="" />
                                     <div className="right-content">
                                       <h4>David Martino</h4>
                                       <span>CEO of David Company</span>
@@ -598,7 +799,7 @@ const home = () => {
                               <div className="row">
                                 <div className="col-lg-12">
                                   <div className="client-content">
-                                  <img src={qoute} alt=""/>
+                                    <img src={qoute} alt="" />
                                     <p>
                                       “CTO, Lorem ipsum dolor sit amet,
                                       consectetur adpiscing elit, sed do eismod
@@ -609,7 +810,7 @@ const home = () => {
                                     </p>
                                   </div>
                                   <div className="down-content">
-                                  <img src={client} alt=""/>
+                                    <img src={client} alt="" />
                                     <div className="right-content">
                                       <h4>Jake H. Nyo</h4>
                                       <span>CTO of Digital Company</span>
@@ -626,7 +827,7 @@ const home = () => {
                               <div className="row">
                                 <div className="col-lg-12">
                                   <div className="client-content">
-                                    <img src={qoute} alt=""/>
+                                    <img src={qoute} alt="" />
                                     <p>
                                       “May, Lorem ipsum dolor sit amet,
                                       consectetur adpiscing elit, sed do eismod
@@ -637,7 +838,7 @@ const home = () => {
                                     </p>
                                   </div>
                                   <div className="down-content">
-                                    <img src={client} alt=""/>
+                                    <img src={client} alt="" />
                                     <div className="right-content">
                                       <h4>May C.</h4>
                                       <span>Founder of Catherina Co.</span>
@@ -654,7 +855,7 @@ const home = () => {
                               <div className="row">
                                 <div className="col-lg-12">
                                   <div className="client-content">
-                                    <img src={about} alt=""/>
+                                    <img src={about} alt="" />
                                     <p>
                                       “Lorem ipsum dolor sit amet, consectetur
                                       adpiscing elit, sed do eismod tempor
@@ -665,7 +866,7 @@ const home = () => {
                                     </p>
                                   </div>
                                   <div className="down-content">
-                                    <img src={about} alt=""/>
+                                    <img src={about} alt="" />
                                     <div className="right-content">
                                       <h4>Random Staff</h4>
                                       <span>Manager, Digital Company</span>
@@ -682,7 +883,7 @@ const home = () => {
                               <div className="row">
                                 <div className="col-lg-12">
                                   <div className="client-content">
-                                    <img src={about} alt=""/>
+                                    <img src={about} alt="" />
                                     <p>
                                       “Mark, Lorem ipsum dolor sit amet,
                                       consectetur adpiscing elit, sed do eismod
@@ -693,7 +894,7 @@ const home = () => {
                                     </p>
                                   </div>
                                   <div className="down-content">
-                                    <img src={about} alt=""/>
+                                    <img src={about} alt="" />
                                     <div className="right-content">
                                       <h4>Mark Am</h4>
                                       <span>CTO, Amber Do Company</span>
@@ -722,7 +923,7 @@ const home = () => {
                 <h4>
                   We Have The Best Pre-Order <em>Prices</em> You Can Get
                 </h4>
-                <img src={heading} alt=""/>
+                <img src={heading} alt="" />
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eismod tempor incididunt ut labore et dolore magna.
