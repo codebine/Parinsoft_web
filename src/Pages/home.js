@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../CSS/style.css";
 import "../CSS/owl.css";
 import "../CSS/animated.css";
 import "../CSS/main.css";
-import Logo from "../img/logo.png"
+// import Logo from "../img/ParinSoft.svg"
 import slider from "../img/slider-dec.png"
 import heading from "../img/heading-line-dec.png"
 import about from "../img/about-right-dec.png"
@@ -19,6 +19,25 @@ import shape2 from "../img/shape2.svg";
 
 
 const home = () => {
+  useEffect(() => {
+    const trigger = document.querySelector('.menu-trigger');
+    const nav = document.querySelector('.main-nav .nav');
+
+    const toggleDropdown = () => {
+      nav.classList.toggle('show'); // Bootstrap-style show class
+    };
+
+    if (trigger && nav) {
+      trigger.addEventListener('click', toggleDropdown);
+    }
+
+    return () => {
+      if (trigger) {
+        trigger.removeEventListener('click', toggleDropdown);
+      }
+    };
+  }, []);
+
   return (
     <div>
       {/* <!-- ***** Header Area Start ***** --> */}
@@ -33,7 +52,7 @@ const home = () => {
               <nav className="main-nav">
                 {/* <!-- ***** Logo Start ***** --> */}
                 <a href="index.html" className="logo">
-                  <img src={Logo} alt="Chain App Dev" />
+                  {/* <img src={Logo} alt="" style={{ marginTop: "-130px" }} /> */}
                 </a>
                 {/* <!-- ***** Logo End ***** --> */}
                 {/* <!-- ***** Menu Start ***** --> */}
@@ -62,7 +81,7 @@ const home = () => {
                   <li>
                     <div className="gradient-button">
                       <a id="modal_trigger" href="#modal">
-                        <i className="fa fa-sign-in-alt"></i> Sign In Now
+                        <i className="fa fa-sign-in-alt"></i> LogIn
                       </a>
                     </div>
                   </li>
@@ -77,126 +96,6 @@ const home = () => {
         </div>
       </header>
       {/* <!-- ***** Header Area End ***** --> */}
-
-      <div id="modal" className="popupContainer" style={{ display: "none" }}>
-        <div className="popupHeader">
-          <span className="header_title">Login</span>
-          <span className="modal_close">
-            <i className="fa fa-times"></i>
-          </span>
-        </div>
-
-        <section className="popupBody">
-          {/* <!-- Social Login --> */}
-          <div className="social_login">
-            <div className="">
-              <a href="#" className="social_box fb">
-                <span className="icon">
-                  <i className="fab fa-facebook"></i>
-                </span>
-                <span className="icon_title">Connect with Facebook</span>
-              </a>
-
-              <a href="#" className="social_box google">
-                <span className="icon">
-                  <i className="fab fa-google-plus"></i>
-                </span>
-                <span className="icon_title">Connect with Google</span>
-              </a>
-            </div>
-
-            <div className="centeredText">
-              <span>Or use your Email address</span>
-            </div>
-
-            <div className="action_btns">
-              <div className="one_half">
-                <a href="#" id="login_form" className="btn">
-                  Login
-                </a>
-              </div>
-              <div className="one_half last">
-                <a href="#" id="register_form" className="btn">
-                  Sign up
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Username & Password Login form --> */}
-          <div className="user_login">
-            <form>
-              <label>Email / Username</label>
-              <input type="text" />
-              <br />
-
-              <label>Password</label>
-              <input type="password" />
-              <br />
-
-              <div className="checkbox">
-                <input id="remember" type="checkbox" />
-                <label for="remember">Remember me on this computer</label>
-              </div>
-
-              <div className="action_btns">
-                <div className="one_half">
-                  <a href="#" className="btn back_btn">
-                    <i className="fa fa-angle-double-left"></i> Back
-                  </a>
-                </div>
-                <div className="one_half last">
-                  <a href="#" className="btn btn_red">
-                    Login
-                  </a>
-                </div>
-              </div>
-            </form>
-
-            <a href="#" className="forgot_password">
-              Forgot password?
-            </a>
-          </div>
-
-          {/* <!-- Register Form --> */}
-          <div className="user_register">
-            <form>
-              <label>Full Name</label>
-              <input type="text" />
-              <br />
-
-              <label>Email Address</label>
-              <input type="email" />
-              <br />
-
-              <label>Password</label>
-              <input type="password" />
-              <br />
-
-              <div className="checkbox">
-                <input id="send_updates" type="checkbox" />
-                <label for="send_updates">
-                  Send me occasional email updates
-                </label>
-              </div>
-
-              <div className="action_btns">
-                <div className="one_half">
-                  <a href="#" className="btn back_btn">
-                    <i className="fa fa-angle-double-left"></i> Back
-                  </a>
-                </div>
-                <div className="one_half last">
-                  <a href="#" className="btn btn_red">
-                    Register
-                  </a>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
-      </div>
-
       <div
         className="main-banner wow fadeIn"
         id="top"
@@ -1043,7 +942,7 @@ const home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-6">
               <div className="footer-widget">
                 <h4>About Us</h4>
                 <ul>
@@ -1063,50 +962,6 @@ const home = () => {
                     <a href="#">Pricing</a>
                   </li>
                 </ul>
-                <ul>
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">Testimonials</a>
-                  </li>
-                  <li>
-                    <a href="#">Pricing</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-3">
-              <div className="footer-widget">
-                <h4>Useful Links</h4>
-                <ul>
-                  <li>
-                    <a href="#">Free Apps</a>
-                  </li>
-                  <li>
-                    <a href="#">App Engine</a>
-                  </li>
-                  <li>
-                    <a href="#">Programming</a>
-                  </li>
-                  <li>
-                    <a href="#">Development</a>
-                  </li>
-                  <li>
-                    <a href="#">App News</a>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <a href="#">App Dev Team</a>
-                  </li>
-                  <li>
-                    <a href="#">Digital Web</a>
-                  </li>
-                  <li>
-                    <a href="#">Normal Apps</a>
-                  </li>
-                </ul>
               </div>
             </div>
             <div className="col-lg-3">
@@ -1124,17 +979,7 @@ const home = () => {
             <div className="col-lg-12">
               <div className="copyright-text">
                 <p>
-                  Copyright © 2022 Chain App Dev Company. All Rights Reserved.
-                  <br />
-                  Design:{" "}
-                  <a
-                    href="https://templatemo.com/"
-                    target="_blank"
-                    title="css templates"
-                    rel="noreferrer"
-                  >
-                    TemplateMo
-                  </a>
+                  Copyright © 2025 Parinsoft. All Rights Reserved.
                 </p>
               </div>
             </div>

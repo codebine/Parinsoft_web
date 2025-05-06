@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect }  from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../CSS/style.css";
@@ -6,9 +6,27 @@ import "../CSS/owl.css";
 import "../CSS/animated.css";
 import "../CSS/head.css";
 import "../CSS/main.css";
-import Logo from "../img/logo.png"
+// import Logo from "../img/logo.png"
 
 const Contact = () => {
+     useEffect(() => {
+        const trigger = document.querySelector('.menu-trigger');
+        const nav = document.querySelector('.main-nav .nav');
+    
+        const toggleDropdown = () => {
+          nav.classList.toggle('show'); // Bootstrap-style show class
+        };
+    
+        if (trigger && nav) {
+          trigger.addEventListener('click', toggleDropdown);
+        }
+    
+        return () => {
+          if (trigger) {
+            trigger.removeEventListener('click', toggleDropdown);
+          }
+        };
+      }, []);
     return (
         <div>
             {/* <!-- ***** Header Area Start ***** --> */}
@@ -23,13 +41,13 @@ const Contact = () => {
                             <nav className="main-nav">
                                 {/* <!-- ***** Logo Start ***** --> */}
                                 <a href="index.html" className="logo">
-                                    <img src={Logo} alt="Chain App Dev" />
+                                    {/* <img src={Logo} alt="Chain App Dev" /> */}
                                 </a>
                                 {/* <!-- ***** Logo End ***** --> */}
                                 {/* <!-- ***** Menu Start ***** --> */}
                                 <ul className="nav">
                                     <li className="scroll-to-section">
-                                        <NavLink to="/Home">Home</NavLink>
+                                        <NavLink to="/">Home</NavLink>
                                     </li>
                                     <li className="scroll-to-section">
                                         <NavLink to="/About" >About</NavLink>

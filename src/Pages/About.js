@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect }  from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../CSS/style.css";
 import "../CSS/owl.css";
 import "../CSS/animated.css";
-import Logo from "../img/logo.png"
+// import Logo from "../img/logo.png"
 
 
 import "../CSS/about.css";
@@ -15,6 +15,24 @@ import bg_2 from "../img/valuable-skill.jpg";
 import bg_3 from "../img/play-video.jpg";
 
 const About = () => {
+   useEffect(() => {
+      const trigger = document.querySelector('.menu-trigger');
+      const nav = document.querySelector('.main-nav .nav');
+  
+      const toggleDropdown = () => {
+        nav.classList.toggle('show'); // Bootstrap-style show class
+      };
+  
+      if (trigger && nav) {
+        trigger.addEventListener('click', toggleDropdown);
+      }
+  
+      return () => {
+        if (trigger) {
+          trigger.removeEventListener('click', toggleDropdown);
+        }
+      };
+    }, []);
     return (
         <div>
             {/* <!-- ***** Header Area Start ***** --> */}
@@ -29,13 +47,13 @@ const About = () => {
                             <nav className="main-nav">
                                 {/* <!-- ***** Logo Start ***** --> */}
                                 <a href="index.html" className="logo">
-                                    <img src={Logo} alt="Chain App Dev" />
+                                    {/* <img src={Logo} alt="Chain App Dev" /> */}
                                 </a>
                                 {/* <!-- ***** Logo End ***** --> */}
                                 {/* <!-- ***** Menu Start ***** --> */}
                                 <ul className="nav">
                                     <li className="scroll-to-section">
-                                        <NavLink to="/Home">Home</NavLink>
+                                        <NavLink to="/">Home</NavLink>
                                     </li>
                                     <li className="scroll-to-section">
                                         <NavLink to="/About" className="active">About</NavLink>
