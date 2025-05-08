@@ -9,7 +9,7 @@ import Contact from './Pages/Contact'
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/Parinsoft_web">
       <Routes >
         <Route path='/Parinsoft_web/'element={<Home/>}></Route>
         <Route path='/About'element={<About/>}></Route>
