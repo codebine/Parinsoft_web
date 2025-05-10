@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Parinsoft_web/static/css/main.a1740fb1.css",
-    "main.js": "/Parinsoft_web/static/js/main.0b6c989e.js",
+    "main.js": "/Parinsoft_web/static/js/main.7cc31a4c.js",
     "static/js/453.206e4780.chunk.js": "/Parinsoft_web/static/js/453.206e4780.chunk.js",
     "static/media/thumb1.png": "/Parinsoft_web/static/media/thumb1.4ac289f2ba03202877c1.png",
     "static/media/breadcrumbs-bg.png": "/Parinsoft_web/static/media/breadcrumbs-bg.bc75d37435887c75e2eb.png",
@@ -13,22 +13,22 @@
     "static/media/valuable-skill.jpg": "/Parinsoft_web/static/media/valuable-skill.2ef34e165dcaa776b7fb.jpg",
     "static/media/step-3.jpg": "/Parinsoft_web/static/media/step-3.36bcbcd9580645c93db9.jpg",
     "static/media/footer-bg.png": "/Parinsoft_web/static/media/footer-bg.7d736a591de6c328f321.png",
-    "static/media/illustration2.svg": "/Parinsoft_web/static/media/illustration2.2b9b66d3f73d2e14b2f690c6d63b0447.svg",
+    "static/media/illustration2.svg": "/Parinsoft_web/static/media/illustration2.d98c74d3ba9631249cd3b45398af585b.svg",
     "static/media/slider-left-dec.png": "/Parinsoft_web/static/media/slider-left-dec.da0a0b96f1813784cb0b.png",
-    "static/media/illustration3.svg": "/Parinsoft_web/static/media/illustration3.6e20b7dd2c45dcc459fdeb883775d78d.svg",
+    "static/media/illustration3.svg": "/Parinsoft_web/static/media/illustration3.1e8ec7b67822d4d5b13b80a02f4aded9.svg",
     "static/media/about-right-dec.png": "/Parinsoft_web/static/media/about-right-dec.793eb0c7327a2ab3f9d8.png",
-    "static/media/illustration1.svg": "/Parinsoft_web/static/media/illustration1.37bbf11c45a703352832571d08bf4d27.svg",
-    "static/media/shape1.svg": "/Parinsoft_web/static/media/shape1.531476e3891845b1dc80ec66e4723c6f.svg",
+    "static/media/illustration1.svg": "/Parinsoft_web/static/media/illustration1.6837ed6977ed1b8d086109c98abe868b.svg",
+    "static/media/shape1.svg": "/Parinsoft_web/static/media/shape1.6ca92bf214694134c0e12e84cc4d148d.svg",
     "static/media/slider-dec.png": "/Parinsoft_web/static/media/slider-dec.75585872b517dd5efcf5.png",
     "static/media/about-bg.jpg": "/Parinsoft_web/static/media/about-bg.096aebb05c644a4e997e.jpg",
-    "static/media/shape2.svg": "/Parinsoft_web/static/media/shape2.0133aa7eb2e55b619f47a7ccca12d965.svg",
+    "static/media/shape2.svg": "/Parinsoft_web/static/media/shape2.e3a8e558a952f76d51278a0a15c3a08f.svg",
     "index.html": "/Parinsoft_web/index.html",
     "main.a1740fb1.css.map": "/Parinsoft_web/static/css/main.a1740fb1.css.map",
-    "main.0b6c989e.js.map": "/Parinsoft_web/static/js/main.0b6c989e.js.map",
+    "main.7cc31a4c.js.map": "/Parinsoft_web/static/js/main.7cc31a4c.js.map",
     "453.206e4780.chunk.js.map": "/Parinsoft_web/static/js/453.206e4780.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a1740fb1.css",
-    "static/js/main.0b6c989e.js"
+    "static/js/main.7cc31a4c.js"
   ]
 }
