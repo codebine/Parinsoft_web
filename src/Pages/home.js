@@ -18,13 +18,13 @@ import shape1 from "../img/shape1.svg";
 import shape2 from "../img/shape2.svg";
 
 
-const home = () => {
-  useEffect(() => {
+const Home = () => {
+ useEffect(() => {
     const trigger = document.querySelector('.menu-trigger');
     const nav = document.querySelector('.main-nav .nav');
 
     const toggleDropdown = () => {
-      nav.classList.toggle('show'); // Bootstrap-style show class
+      nav.classList.toggle('show');
     };
 
     if (trigger && nav) {
@@ -37,6 +37,7 @@ const home = () => {
       }
     };
   }, []);
+
 
   return (
     <div>
@@ -58,7 +59,7 @@ const home = () => {
                 {/* <!-- ***** Menu Start ***** --> */}
                 <ul className="nav">
                   <li className="scroll-to-section">
-                    <NavLink to="/Home" className="active">Home</NavLink>
+                    <NavLink to="/" className="active">Home</NavLink>
                   </li>
                   <li className="scroll-to-section">
                     <NavLink to="/About">About</NavLink>
@@ -990,4 +991,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
